@@ -1,0 +1,33 @@
+/* src/styles.css */
+
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .btn.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .revision-section {
+    margin-top: 20px;
+  }
+  
+  .list-group-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px;
+  }
+  
+  .list-group-item h5 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .list-group-item p {
+    margin: 0;
+    color: #666;
+  }
+  

@@ -1,0 +1,110 @@
+[
+        {
+          "question": "What is a computer network?",
+          "answer": "A computer network is a collection of interconnected computers and devices that communicate with each other to share resources and information. Networks can be local (LAN) or wide-area (WAN)."
+        },
+        {
+          "question": "What is the OSI model?",
+          "answer": "The OSI (Open Systems Interconnection) model is a conceptual framework used to understand and design network protocols. It consists of seven layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application."
+        },
+        {
+          "question": "What is the difference between TCP and UDP?",
+          "answer": "TCP (Transmission Control Protocol) is a connection-oriented protocol that ensures reliable data transmission with error checking and flow control. UDP (User Datagram Protocol) is a connectionless protocol that allows faster data transmission with no guarantee of delivery or order."
+        },
+        {
+          "question": "What is a subnet mask?",
+          "answer": "A subnet mask is a 32-bit number used in IP networking to divide an IP address into network and host portions. It helps in determining the network address and the range of IP addresses within the subnet."
+        },
+        {
+          "question": "What is the purpose of a router?",
+          "answer": "A router is a networking device that forwards data packets between computer networks. It directs traffic based on IP addresses and connects different networks, such as LANs and WANs."
+        },
+        {
+          "question": "What is DNS?",
+          "answer": "DNS (Domain Name System) is a hierarchical naming system that translates human-readable domain names (like www.example.com) into IP addresses that computers use to identify each other on the network."
+        },
+        {
+          "question": "What is DHCP?",
+          "answer": "DHCP (Dynamic Host Configuration Protocol) is a network management protocol that automatically assigns IP addresses and other network configuration parameters to devices on a network, simplifying network administration."
+        },
+        {
+          "question": "What is a firewall?",
+          "answer": "A firewall is a network security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules. It can be hardware-based, software-based, or a combination of both."
+        },
+        {
+          "question": "What is NAT?",
+          "answer": "NAT (Network Address Translation) is a technique used to map multiple private IP addresses to a single public IP address. It helps in conserving IP addresses and provides an additional layer of security."
+        },
+        {
+          "question": "What is a VLAN?",
+          "answer": "A VLAN (Virtual Local Area Network) is a logical grouping of devices on a network, regardless of their physical location. It allows network administrators to segment a network into different broadcast domains for better management and security."
+        },
+        {
+          "question": "What is the difference between HTTP and HTTPS?",
+          "answer": "HTTP (Hypertext Transfer Protocol) is a protocol used for transmitting data over the web. HTTPS (HTTP Secure) is the secure version of HTTP, which uses encryption (SSL/TLS) to protect data during transmission, ensuring privacy and security."
+        },
+        {
+          "question": "What is a switch in networking?",
+          "answer": "A switch is a network device that connects devices within a LAN and uses MAC addresses to forward data to the appropriate destination. It operates at the Data Link layer of the OSI model."
+        },
+        {
+          "question": "What is a packet in networking?",
+          "answer": "A packet is a small unit of data transmitted over a network. It contains the payload (actual data) and metadata (such as source and destination IP addresses, and protocol information)."
+        },
+        {
+          "question": "What is bandwidth?",
+          "answer": "Bandwidth refers to the maximum rate at which data can be transmitted over a network connection or communication channel. It is usually measured in bits per second (bps)."
+        },
+    {
+      "question": "What is the difference between a switch and a hub?",
+      "answer": "A switch operates at the Data Link layer and forwards data based on MAC addresses, sending it only to the intended recipient. A hub operates at the Physical layer and broadcasts data to all connected devices, regardless of the recipient."
+    },
+    {
+      "question": "What is the purpose of the ARP protocol?",
+      "answer": "ARP (Address Resolution Protocol) is used to map an IP address to a MAC address within a local network. It enables devices to locate each other on the same network segment."
+    },
+    {
+      "question": "What is the role of the Network Layer in the OSI model?",
+      "answer": "The Network Layer (Layer 3) is responsible for routing data packets from the source to the destination across multiple networks. It handles logical addressing (e.g., IP addresses) and packet forwarding."
+    },
+    {
+      "question": "What is a VPN?",
+      "answer": "A VPN (Virtual Private Network) is a technology that creates a secure and encrypted connection over a less secure network, such as the Internet. It provides privacy and security for data transmission."
+    },
+    {
+      "question": "What is a MAC address?",
+      "answer": "A MAC (Media Access Control) address is a unique identifier assigned to network interfaces for communication on the Data Link layer. It is used to identify devices within a local network."
+    },
+    {
+      "question": "What is an IP address?",
+      "answer": "An IP (Internet Protocol) address is a unique numerical label assigned to each device connected to a network that uses IP for communication. It identifies devices and facilitates their interaction over the network."
+    },
+    {
+      "question": "What is the function of the TCP/IP model?",
+      "answer": "The TCP/IP (Transmission Control Protocol/Internet Protocol) model is a suite of communication protocols used to interconnect network devices on the Internet. It consists of four layers: Link, Internet, Transport, and Application."
+    },
+    {
+      "question": "What is a bandwidth-delay product?",
+      "answer": "The bandwidth-delay product is the product of a network's bandwidth (data rate) and the round-trip time (RTT). It measures the amount of data that can be in transit in the network at any given time."
+    },
+    {
+      "question": "What is the difference between IPv4 and IPv6?",
+      "answer": "IPv4 is the fourth version of the Internet Protocol, using 32-bit addresses and supporting approximately 4.3 billion addresses. IPv6 is the sixth version, using 128-bit addresses and supporting a vastly larger address space."
+    },
+    {
+      "question": "What is a port number?",
+      "answer": "A port number is a numerical identifier in a network protocol used to specify a particular process or service on a device. It allows multiple services to run simultaneously on a single IP address."
+    },
+    {
+      "question": "What is QoS (Quality of Service)?",
+      "answer": "QoS (Quality of Service) refers to the management of network resources to ensure the performance and reliability of critical applications by prioritizing certain types of traffic, such as voice or video."
+    },
+    {
+      "question": "What is a DMZ (Demilitarized Zone) in network security?",
+      "answer": "A DMZ (Demilitarized Zone) is a network segment that acts as a buffer zone between an internal network and external networks (like the Internet). It hosts services that need to be accessible from outside, such as web servers, while protecting the internal network."
+    },
+    {
+      "question": "What is a network protocol?",
+      "answer": "A network protocol is a set of rules and conventions for communication between network devices. It defines how data is transmitted, received, and processed across the network."
+    }
+  ]

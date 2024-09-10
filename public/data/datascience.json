@@ -1,0 +1,42 @@
+[
+    {
+      "question": "What is Data Science?",
+      "answer": "Data Science is an interdisciplinary field that uses statistical methods, algorithms, and systems to extract knowledge and insights from structured and unstructured data."
+    },
+    {
+      "question": "What is the difference between supervised and unsupervised learning?",
+      "answer": "Supervised learning involves training a model on labeled data, where the correct output is provided. Unsupervised learning deals with unlabeled data and attempts to find patterns or relationships without specific outputs."
+    },
+    {
+      "question": "What is a confusion matrix?",
+      "answer": "A confusion matrix is a table used to describe the performance of a classification model. It compares the predicted labels with the actual labels to calculate metrics like accuracy, precision, recall, and F1-score."
+    },
+    {
+      "question": "Explain the concept of overfitting in machine learning.",
+      "answer": "Overfitting occurs when a machine learning model performs well on training data but fails to generalize to unseen data. It happens when the model learns noise and irrelevant details in the training set."
+    },
+    {
+      "question": "What is cross-validation?",
+      "answer": "Cross-validation is a technique for assessing how a model will generalize to an independent dataset. It works by splitting the data into several folds, training the model on some folds, and validating it on the remaining folds."
+    },
+    {
+      "question": "What are the key steps in a data science project?",
+      "answer": "The key steps in a data science project are: 1) Problem Definition, 2) Data Collection, 3) Data Cleaning and Preprocessing, 4) Exploratory Data Analysis (EDA), 5) Model Building, 6) Model Evaluation, 7) Deployment and Monitoring."
+    },
+    {
+      "question": "What is the difference between a Data Scientist and a Data Analyst?",
+      "answer": "A Data Analyst primarily focuses on interpreting data to produce actionable insights. A Data Scientist not only analyzes data but also builds predictive models and performs more advanced analyses using machine learning techniques."
+    },
+    {
+      "question": "What is feature engineering?",
+      "answer": "Feature engineering is the process of selecting, modifying, or creating new features from raw data to improve the performance of machine learning models."
+    },
+    {
+      "question": "What is the importance of data normalization?",
+      "answer": "Data normalization involves scaling features to ensure that they are on the same scale, which helps in improving the performance of machine learning models, especially those sensitive to the scale of input data such as gradient-based models."
+    },
+    {
+      "question": "What is the purpose of a ROC curve?",
+      "answer": "A ROC (Receiver Operating Characteristic) curve is a graphical representation that shows the performance of a classification model at different threshold levels. It plots the true positive rate (TPR) against the false positive rate (FPR)."
+    }
+  ]

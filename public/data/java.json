@@ -1,0 +1,58 @@
+[
+    {
+      "question": "What is the main difference between Java and C++?",
+      "answer": "Java is an object-oriented language that is platform-independent, while C++ is a compiled language that is platform-dependent."
+    },
+    {
+      "question": "What is the purpose of the 'public static void main' method in Java?",
+      "answer": "The 'public static void main' method is the entry point for any Java program, where the program starts execution."
+    },
+    {
+      "question": "What is the difference between 'break' and 'continue' statements in Java?",
+      "answer": "The 'break' statement is used to exit a loop or switch statement, while the 'continue' statement is used to skip the current iteration and move to the next iteration."
+    },
+    {
+      "question": "What is the purpose of the 'this' keyword in Java?",
+      "answer": "The 'this' keyword is used to refer to the current object, allowing access to its properties and methods."
+    },
+    {
+      "question": "What is the difference between '== 'and '.equals()' methods in Java?",
+      "answer": "The '==' operator checks for reference equality, while the '.equals()' method checks for value equality."
+    },
+    {
+      "question": "What is the purpose of the 'super' keyword in Java?",
+      "answer": "The 'super' keyword is used to access the members of a superclass from a subclass."
+    },
+    {
+      "question": "What is the difference between 'throw' and 'throws' in Java?",
+      "answer": "The 'throw' keyword is used to explicitly throw an exception, while the 'throws' keyword is used to declare that a method may throw an exception."
+    },
+    {
+      "question": "What is the purpose of the 'final' keyword in Java?",
+      "answer": "The 'final' keyword is used to declare a variable, method, or class that cannot be modified or overridden."
+    },
+    {
+      "question": "What is the difference between 'abstract' and 'interface' in Java?",
+      "answer": "An abstract class can have both abstract and concrete methods, while an interface can only have abstract methods."
+    },
+    {
+      "question": "What is the purpose of the 'try-catch' block in Java?",
+      "answer": "The 'try-catch' block is used to handle exceptions and prevent program termination."
+    },
+    {
+      "question": "What is the purpose of the 'static' keyword in Java?",
+      "answer": "The 'static' keyword is used to declare a variable or method that belongs to a class, rather than an instance of the class."
+    },
+    {
+      "question": "What is the difference between 'ArrayList' and 'LinkedList' in Java?",
+      "answer": "ArrayList is a dynamic array-based implementation, while LinkedList is a doubly-linked list implementation."
+    },
+    {
+      "question": "What is the purpose of the 'hashCode()' method in Java?",
+      "answer": "The 'hashCode()' method is used to generate a unique hash code for an object, used in hash-based data structures."
+    },
+    {
+      "question": "What is the difference between 'Serializable' and 'Cloneable' in Java?",
+      "answer": "Serializable is used for object serialization, while Cloneable is used for object cloning."
+    }
+  ]

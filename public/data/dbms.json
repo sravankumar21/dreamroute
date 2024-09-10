@@ -1,0 +1,194 @@
+[
+    {
+        "question": "What is a DBMS?",
+        "answer": "A Database Management System (DBMS) is software that manages databases and provides an interface for users to create, retrieve, update, and manage data."
+    },
+    {
+        "question": "What are the types of DBMS?",
+        "answer": "The main types of DBMS are Hierarchical, Network, Relational, and Object-oriented DBMS."
+    },
+    {
+        "question": "What is a relational database?",
+        "answer": "A relational database is a type of database that organizes data into tables (relations) of rows and columns."
+    },
+    {
+        "question": "What is an entity?",
+        "answer": "An entity is an object or thing in the real world with an independent existence that can be distinctly identified."
+    },
+    {
+        "question": "What is a table?",
+        "answer": "A table is a collection of related data held in a structured format within a database. It consists of columns and rows."
+    },
+    {
+        "question": "What is a record?",
+        "answer": "A record is a row in a table that contains data about a single entity."
+    },
+    {
+        "question": "What is a field?",
+        "answer": "A field is a column in a table that represents a specific attribute of the entity."
+    },
+    {
+        "question": "What is a primary key?",
+        "answer": "A primary key is a unique identifier for a record in a table, which ensures that no duplicate entries exist."
+    },
+    {
+        "question": "What is a composite key?",
+        "answer": "A composite key is a combination of two or more columns in a table that together uniquely identify a row."
+    },
+    {
+        "question": "What is a foreign key?",
+        "answer": "A foreign key is a column or set of columns in one table that refers to the primary key of another table."
+    },
+    {
+        "question": "What is a candidate key?",
+        "answer": "A candidate key is a column or set of columns that can uniquely identify any record in a table. It can be a candidate for the primary key."
+    },
+    {
+        "question": "What is a super key?",
+        "answer": "A super key is a set of one or more columns that can uniquely identify a record in a table."
+    },
+    {
+        "question": "What is normalization?",
+        "answer": "Normalization is the process of organizing the data in a database to avoid redundancy and improve data integrity."
+    },
+    {
+        "question": "What is denormalization?",
+        "answer": "Denormalization is the process of combining normalized tables to reduce the complexity of queries and improve read performance."
+    },
+    {
+        "question": "What is a view in DBMS?",
+        "answer": "A view is a virtual table based on the result of a query on one or more tables."
+    },
+    {
+        "question": "What is an index in DBMS?",
+        "answer": "An index is a data structure that improves the speed of data retrieval operations on a database table."
+    },
+    {
+        "question": "What is SQL?",
+        "answer": "SQL (Structured Query Language) is a programming language used for managing and manipulating relational databases."
+    },
+    {
+        "question": "What is a join in SQL?",
+        "answer": "A join is an SQL operation used to combine rows from two or more tables based on a related column."
+    },
+    {
+        "question": "What is an inner join?",
+        "answer": "An inner join returns rows when there is at least one match between columns in both tables."
+    },
+    {
+        "question": "What is an outer join?",
+        "answer": "An outer join returns all rows from one table and the matching rows from the other table. If no match is found, NULL values are returned."
+    },
+    {
+        "question": "What is a left join?",
+        "answer": "A left join returns all rows from the left table and the matched rows from the right table. Unmatched rows from the right table are returned as NULL."
+    },
+    {
+        "question": "What is a right join?",
+        "answer": "A right join returns all rows from the right table and the matched rows from the left table. Unmatched rows from the left table are returned as NULL."
+    },
+    {
+        "question": "What is a full join?",
+        "answer": "A full join returns all rows when there is a match in either table. If no match is found, NULL values are returned."
+    },
+    {
+        "question": "What is a self join?",
+        "answer": "A self join is a join in which a table is joined with itself."
+    },
+    {
+        "question": "What is a cross join?",
+        "answer": "A cross join returns the Cartesian product of rows from the tables involved in the join."
+    },
+    {
+        "question": "What is a subquery?",
+        "answer": "A subquery is a query nested inside another query."
+    },
+    {
+        "question": "What is a stored procedure?",
+        "answer": "A stored procedure is a precompiled collection of SQL statements that can be executed as a single unit."
+    },
+    {
+        "question": "What is a trigger?",
+        "answer": "A trigger is a set of instructions automatically executed in response to certain events on a table or view."
+    },
+    {
+        "question": "What is a cursor?",
+        "answer": "A cursor is a database object used to retrieve, manipulate, and navigate through the result set of a query row by row."
+    },
+    {
+        "question": "What is a transaction?",
+        "answer": "A transaction is a unit of work performed against a database that is treated as a single, atomic operation."
+    },
+    {
+        "question": "What are ACID properties?",
+        "answer": "ACID stands for Atomicity, Consistency, Isolation, and Durability, which are key properties ensuring reliable transactions in DBMS."
+    },
+    {
+        "question": "What is atomicity?",
+        "answer": "Atomicity ensures that a transaction is all-or-nothing. If any part of the transaction fails, the entire transaction is rolled back."
+    },
+    {
+        "question": "What is consistency?",
+        "answer": "Consistency ensures that a transaction brings the database from one valid state to another, maintaining database rules."
+    },
+    {
+        "question": "What is isolation?",
+        "answer": "Isolation ensures that transactions are executed independently of each other without interference."
+    },
+    {
+        "question": "What is durability?",
+        "answer": "Durability ensures that once a transaction is committed, the changes are permanently saved in the database."
+    },
+    {
+        "question": "What is a deadlock?",
+        "answer": "A deadlock occurs when two or more transactions block each other, waiting for resources held by the other to complete."
+    },
+    {
+        "question": "What is concurrency control?",
+        "answer": "Concurrency control is the management of simultaneous operations without conflicts in a multi-user environment."
+    },
+    {
+        "question": "What is two-phase locking (2PL)?",
+        "answer": "Two-phase locking is a concurrency control method that ensures transactions acquire locks before accessing data and release locks after the transaction is complete."
+    },
+    {
+        "question": "What is replication in DBMS?",
+        "answer": "Replication is the process of copying data from one database to another to ensure consistency and improve availability."
+    },
+    {
+        "question": "What is sharding?",
+        "answer": "Sharding is the process of splitting a large database into smaller, more manageable pieces, called shards, to distribute load and improve performance."
+    },
+    {
+        "question": "What is a database schema?",
+        "answer": "A database schema is the structure that defines the organization of data in a database, including tables, columns, and relationships."
+    },
+    {
+        "question": "What is a data model?",
+        "answer": "A data model is an abstract model that organizes elements of data and standardizes how they relate to one another."
+    },
+    {
+        "question": "What is an ER diagram?",
+        "answer": "An Entity-Relationship (ER) diagram is a graphical representation of entities and their relationships within a database."
+    },
+    {
+        "question": "What is a weak entity?",
+        "answer": "A weak entity is an entity that cannot be uniquely identified by its attributes alone and relies on a foreign key relationship with a strong entity."
+    },
+    {
+        "question": "What is a surrogate key?",
+        "answer": "A surrogate key is an artificially generated key, often used as a primary key, to uniquely identify records."
+    },
+    {
+        "question": "What is OLAP?",
+        "answer": "OLAP (Online Analytical Processing) is a category of software that enables users to analyze information from multiple database systems simultaneously."
+    },
+    {
+        "question": "What is OLTP?",
+        "answer": "OLTP (Online Transaction Processing) is a category of systems that manage transaction-oriented applications, typically for data entry and retrieval."
+    },
+    {
+        "question": "What is data warehousing?",
+        "answer": "Data warehousing is the process of collecting and managing large volumes of data from various sources to provide meaningful insights."
+    }
+]

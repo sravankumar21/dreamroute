@@ -1,0 +1,82 @@
+[
+    {
+      "question": "What is an operating system?",
+      "answer": "An operating system (OS) is system software that manages computer hardware, software resources, and provides common services for computer programs."
+    },
+    {
+      "question": "What are the main functions of an operating system?",
+      "answer": "The main functions of an OS include managing hardware resources (CPU, memory, I/O devices), providing a user interface, managing files, and enabling process management and task scheduling."
+    },
+    {
+      "question": "What is a kernel in an operating system?",
+      "answer": "The kernel is the core component of an operating system. It manages system resources, such as memory and CPU, and acts as a bridge between hardware and software applications."
+    },
+    {
+      "question": "What is the difference between multitasking and multiprocessing?",
+      "answer": "Multitasking refers to the ability of an OS to run multiple tasks (processes) at the same time on a single CPU. Multiprocessing refers to the use of two or more CPUs within a single system to execute processes simultaneously."
+    },
+    {
+      "question": "What is a process in an operating system?",
+      "answer": "A process is an instance of a program that is being executed. It includes the program code, its current activity, and the resources it needs (such as CPU, memory, and I/O devices)."
+    },
+    {
+      "question": "What is virtual memory?",
+      "answer": "Virtual memory is a memory management technique that gives an application the impression it has contiguous memory, while in reality, the OS allocates physical memory and swaps data to and from disk as needed."
+    },
+    {
+      "question": "What is a deadlock in operating systems?",
+      "answer": "A deadlock occurs when two or more processes are unable to proceed because each process is waiting for a resource held by another process, creating a cycle of dependency with no resolution."
+    },
+    {
+      "question": "What is the purpose of a file system?",
+      "answer": "The file system in an OS is responsible for managing how data is stored and retrieved. It organizes files and directories and keeps track of which parts of storage are in use and which are available."
+    },
+    {
+      "question": "What is the difference between paging and segmentation?",
+      "answer": "Paging is a memory management scheme that eliminates the need for contiguous allocation of physical memory by dividing memory into fixed-sized blocks called pages. Segmentation divides memory into variable-sized segments based on logical divisions, like functions or data structures."
+    },
+    {
+      "question": "What is a system call in an operating system?",
+      "answer": "A system call is a programmatic way for a process to request services from the operating system's kernel, such as file operations, process control, or network communication."
+    },
+    {
+        "question": "What is the difference between a monolithic and microkernel?",
+        "answer": "A monolithic kernel has all OS services, including drivers, file systems, and system calls, running in the kernel space. A microkernel only includes the minimal core OS services, such as memory management and process scheduling, with other services running in user space for better modularity and security."
+      },
+      {
+        "question": "What is context switching?",
+        "answer": "Context switching is the process of storing the state of a running process and loading the state of another process. This enables multitasking by allowing the CPU to switch between processes efficiently."
+      },
+      {
+        "question": "What is the difference between preemptive and cooperative multitasking?",
+        "answer": "In preemptive multitasking, the operating system decides when to switch between processes by allocating CPU time slices. In cooperative multitasking, processes voluntarily yield control to the OS, meaning one process must finish or yield before another can run."
+      },
+      {
+        "question": "What is a scheduler in an operating system?",
+        "answer": "A scheduler is a system component that determines which processes should be executed by the CPU, when, and for how long. The three types of schedulers are long-term (job scheduler), short-term (CPU scheduler), and medium-term (swapping scheduler)."
+      },
+      {
+        "question": "What are the different types of operating systems?",
+        "answer": "The different types of operating systems include batch operating systems, time-sharing operating systems, distributed operating systems, network operating systems, and real-time operating systems."
+      },
+      {
+        "question": "What is thrashing in operating systems?",
+        "answer": "Thrashing occurs when a system spends most of its time swapping data between RAM and disk (due to excessive paging) rather than executing processes, severely degrading system performance."
+      },
+      {
+        "question": "What is the role of device drivers in an operating system?",
+        "answer": "Device drivers are specialized software programs that allow the operating system to communicate with hardware devices, such as printers, disks, and display adapters, by providing the necessary instructions to interact with them."
+      },
+      {
+        "question": "What is a real-time operating system (RTOS)?",
+        "answer": "A real-time operating system (RTOS) is designed to process data and respond to events within a guaranteed time frame. It is commonly used in systems where timing is critical, such as embedded systems, industrial robots, and medical devices."
+      },
+      {
+        "question": "What is swap space?",
+        "answer": "Swap space is a designated portion of the hard drive used as an extension of physical memory (RAM) when it is fully utilized. It stores inactive pages of memory from processes, freeing up RAM for active processes."
+      },
+      {
+        "question": "What is the difference between a hard and soft real-time system?",
+        "answer": "A hard real-time system guarantees that critical tasks will complete within a strict time limit, and missing a deadline can cause catastrophic failure. A soft real-time system allows some flexibility with deadlines, and missing them may result in performance degradation but not system failure."
+      }
+  ]

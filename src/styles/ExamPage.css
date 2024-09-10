@@ -1,0 +1,101 @@
+/* ExamPage.css */
+
+.exam-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.skill-level-buttons {
+    margin-bottom: 20px;
+}
+
+.skill-level-buttons button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.skill-level-buttons button:hover {
+    background-color: #ddd;
+    border-color: #bbb;
+}
+
+.skill-level-buttons button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.questions-container {
+    margin-bottom: 20px;
+}
+
+.question-card {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.score-container {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tutorials-container {
+    margin-top: 20px;
+}
+
+.tutorials-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tutorials-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tutorials-container li {
+    margin-bottom: 10px;
+}
+
+.tutorials-container a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+
+.tutorials-container a:hover {
+    text-decoration: underline;
+}
+
+.correct-answer {
+    font-size: 16px;
+    font-weight: bold;
+    color: green;
+    margin-top: 10px;
+  }
+  

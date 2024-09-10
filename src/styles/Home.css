@@ -1,0 +1,14 @@
+/* Home.css */
+
+/* Navbar styles can go here if needed */
+
+/* Styles for the career image */
+.career-image {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 7rem;
+  }
+  

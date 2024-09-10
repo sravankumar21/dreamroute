@@ -1,0 +1,35 @@
+.career-roadmap {
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .node {
+    margin: 10px 0;
+  }
+  
+  .node-title {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .node-children {
+    margin-left: 20px;
+  }
+  
+  .node-description, .node-future-scope {
+    margin: 5px 0;
+  }
+  
+  .node-description strong, .node-future-scope strong {
+    font-weight: bold;
+  }
+  
+  .node-future-scope ul {
+    padding-left: 20px;
+  }
+  
