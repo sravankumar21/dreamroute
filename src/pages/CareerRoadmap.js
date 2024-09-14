@@ -1,211 +1,130 @@
-import React, { useState } from 'react';
-import '../styles/pathfinder.css'; // Import the CSS for styling
-
-const careerData = {
-  "post_10th": {
-    "Intermediate": {
-      "streams": {
-        "MPC": {
-          "description": "Maths, Physics, Chemistry",
-          "future_scope": {
-            "Engineering": ["B.E.", "B.Tech"],
-            "Bachelor_Degrees": ["B.Sc. Computer Science", "B.Sc. Mathematics"]
-          }
-        },
-        "BIPC": {
-          "description": "Biology, Physics, Chemistry",
-          "future_scope": {
-            "Medical": ["MBBS", "BDS", "BAMS", "BHMS"],
-            "Bachelor_Degrees": ["B.Sc. Biology", "B.Sc. Biotechnology", "B.Pharmacy"]
-          }
-        },
-        "CEC": {
-          "description": "Civics, Economics, Commerce",
-          "future_scope": {
-            "Commerce": ["B.Com", "BBA"],
-            "Arts": ["BA Economics", "BA Political Science"]
-          }
-        },
-        "MEC": {
-          "description": "Mathematics, Economics, Commerce",
-          "future_scope": {
-            "Commerce": ["B.Com", "BBA"],
-            "Bachelor_Degrees": ["B.Sc. Statistics"]
-          }
-        },
-        "HEC": {
-          "description": "History, Economics, Civics",
-          "future_scope": {
-            "Arts": ["BA History", "BA Economics", "BA Political Science"]
-          }
-        }
-      }
-    },
-    "Diploma": {
-      "streams": {
-        "CSE": {
-          "description": "Computer Science Engineering",
-          "future_scope": ["B.Tech CSE", "B.Sc. IT"]
-        },
-        "ECE": {
-          "description": "Electronics and Communication Engineering",
-          "future_scope": ["B.Tech ECE", "B.Sc. Electronics"]
-        },
-        "EEE": {
-          "description": "Electrical and Electronics Engineering",
-          "future_scope": ["B.Tech EEE", "B.Sc. Electrical"]
-        },
-        "MECH": {
-          "description": "Mechanical Engineering",
-          "future_scope": ["B.Tech Mechanical", "B.Sc. Mechanical"]
-        },
-        "Civil": {
-          "description": "Civil Engineering",
-          "future_scope": ["B.Tech Civil", "B.Sc. Civil"]
-        }
-      }
-    }
-  },
-  "post_Intermediate": {
-    "Engineering": {
-      "streams": {
-        "B.E.": {
-          "branches": ["CSE", "ECE", "EEE", "Mechanical", "Civil"],
-          "future_scope": {
-            "Postgraduate": ["M.Tech", "M.S."],
-            "Competitive_Exams": ["UPSC", "GATE"]
-          }
-        },
-        "B.Tech": {
-          "branches": ["CSE", "ECE", "EEE", "Mechanical", "Civil"],
-          "future_scope": {
-            "Postgraduate": ["M.Tech", "M.S."],
-            "Competitive_Exams": ["UPSC", "GATE"]
-          }
-        }
-      }
-    },
-    "Medical": {
-      "courses": ["MBBS", "BDS", "BAMS", "BHMS", "BPT"],
-      "future_scope": {
-        "Postgraduate": ["MD", "MS", "MDS"],
-        "Competitive_Exams": ["UPSC", "NEET-PG"]
-      }
-    },
-    "Bachelor_Degrees": {
-      "fields": {
-        "Science": ["B.Sc. Physics", "B.Sc. Chemistry", "B.Sc. Mathematics"],
-        "Commerce": ["B.Com General", "B.Com Computers", "BBA"],
-        "Arts": ["BA History", "BA Political Science", "BA Literature"]
-      }
-    }
-  },
-  "post_Diploma": {
-    "B.Tech_Lateral_Entry": {
-      "description": "Direct entry into the second year of B.Tech in respective fields",
-      "future_scope": ["M.Tech", "M.S.", "Jobs in technical fields"]
-    },
-    "Jobs": {
-      "description": "Opportunities for diploma holders in technical fields",
-      "future_scope": ["Junior Engineer", "Technician", "Lab Assistant"]
-    }
-  },
-  "post_Engineering": {
-    "M.Tech": {
-      "specializations": ["CSE", "ECE", "EEE", "Mechanical", "Civil"],
-      "future_scope": {
-        "PhD": ["PhD in Engineering", "Research"],
-        "Competitive_Exams": ["UPSC", "GATE"]
-      }
-    },
-    "M.S.": {
-      "specializations": ["Computer Science", "Electrical Engineering", "Mechanical Engineering", "Civil Engineering"],
-      "future_scope": {
-        "PhD": ["PhD in Engineering", "Research"],
-        "Competitive_Exams": ["UPSC", "GRE"]
-      }
-    },
-    "MBA": {
-      "specializations": ["Finance", "Marketing", "Operations", "HR"],
-      "future_scope": {
-        "Jobs": ["Manager", "Consultant", "Entrepreneur"],
-        "Competitive_Exams": ["CAT", "XAT", "GMAT"]
-      }
-    },
-    "UPSC": {
-      "exams": ["IAS", "IPS", "IFS"],
-      "future_scope": {
-        "Jobs": ["Civil Services"]
-      }
-    }
-  }
-};
+import React, { useState, useEffect } from "react";
+import "../styles/CareerRoadmap.css";
 
 const CareerRoadmap = () => {
-  const [expandedNodes, setExpandedNodes] = useState([]);
+  const [pathData, setPathData] = useState({});
+  const [visibleNodes, setVisibleNodes] = useState({ post_10th: [] });
+  const [error, setError] = useState(null);
 
-  const toggleNode = (node) => {
-    setExpandedNodes(prevState =>
-      prevState.includes(node) ?
-        prevState.filter(n => n !== node) :
-        [...prevState, node]
+  useEffect(() => {
+    fetch('/data/roadmap.json') // Directly using the relative path from public
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Network response was not ok: ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then((data) => setPathData(data))
+      .catch((error) => {
+        console.error("Error fetching JSON:", error);
+        setError(error.message);
+      });
+  }, []);
+
+  const handleNodeClick = (nodeKey) => {
+    const newVisibleNodes = { ...visibleNodes };
+
+    // Close all nodes if a new top-level node is clicked
+    if (
+      nodeKey === "post_10th" ||
+      nodeKey === "post_intermediate" ||
+      nodeKey === "post_diploma" ||
+      nodeKey === "post_btech"
+    ) {
+      Object.keys(newVisibleNodes).forEach((key) => {
+        if (key !== nodeKey) delete newVisibleNodes[key];
+      });
+
+      if (newVisibleNodes[nodeKey]) {
+        delete newVisibleNodes[nodeKey];
+      } else {
+        newVisibleNodes[nodeKey] = Object.keys(pathData[nodeKey]);
+      }
+    } else {
+      // Toggle child nodes
+      const parentKey = nodeKey.split(".").slice(0, -1).join(".");
+      if (newVisibleNodes[parentKey]) {
+        if (newVisibleNodes[nodeKey]) {
+          delete newVisibleNodes[nodeKey];
+        } else {
+          const parts = nodeKey.split(".");
+          let items = pathData;
+          parts.forEach((part) => {
+            items = items[part] || {};
+          });
+
+          if (typeof items === "object" && !Array.isArray(items)) {
+            newVisibleNodes[nodeKey] = Object.keys(items);
+          }
+        }
+      } else {
+        delete newVisibleNodes[nodeKey];
+      }
+    }
+
+    setVisibleNodes(newVisibleNodes);
+  };
+
+  const renderNode = (nodeKey, level = 0) => {
+    const parts = nodeKey.split(".");
+    let items = pathData;
+    parts.forEach((part) => {
+      items = items[part] || {};
+    });
+
+    const color =
+      level === 0
+        ? "btn-primary"
+        : level === 1
+        ? "btn-success"
+        : level === 2
+        ? "btn-info"
+        : level === 3
+        ? "btn-warning"
+        : "btn-secondary";
+    const isLeafNode = Array.isArray(items);
+
+    return (
+      <div key={nodeKey} className={`d-flex flex-column align-items-center ${level === 1 ? "mb-5" : ""}`}>
+        <button
+          onClick={() => handleNodeClick(nodeKey)}
+          className={`btn ${color} mb-3`}
+        >
+          {nodeKey.split(".").pop().toUpperCase()}
+        </button>
+        {visibleNodes[nodeKey] && !isLeafNode && (
+          <div className="d-flex flex-wrap justify-content-center mt-2">
+            {visibleNodes[nodeKey].map((childKey) =>
+              renderNode(`${nodeKey}.${childKey}`, level + 1)
+            )}
+          </div>
+        )}
+        {isLeafNode && (
+          <div className="mt-2 text-dark">
+            <ul className="list-unstyled">
+              {items.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     );
   };
 
-  const renderTree = (nodes, parentKey = '') => {
-    return Object.entries(nodes).map(([key, value]) => {
-      const currentKey = parentKey ? `${parentKey}.${key}` : key;
-      const isExpanded = expandedNodes.includes(currentKey);
-
-      return (
-        <div key={currentKey} className="node">
-          <div className="node-title" onClick={() => toggleNode(currentKey)}>
-            {key} {isExpanded ? '▼' : '▶'}
-          </div>
-          {isExpanded && value && typeof value === 'object' && (
-            <div className="node-children">
-              {value.description && (
-                <div className="node-description">
-                  <strong>Description:</strong> {value.description}
-                </div>
-              )}
-              {value.future_scope && (
-                <div className="node-future-scope">
-                  <strong>Future Scope:</strong>
-                  {Array.isArray(value.future_scope) ? (
-                    <ul>
-                      {value.future_scope.map((item, index) => (
-                        <li key={index}>{item}</li>
-                      ))}
-                    </ul>
-                  ) : (
-                    Object.entries(value.future_scope).map(([scope, items]) => (
-                      <div key={scope}>
-                        <strong>{scope}:</strong>
-                        <ul>
-                          {items.map((item, index) => (
-                            <li key={index}>{item}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))
-                  )}
-                </div>
-              )}
-              {renderTree(value, currentKey)}
-            </div>
-          )}
-        </div>
-      );
-    });
-  };
-
   return (
-    <div className="career-roadmap">
-      <h1 className="title">Career Roadmap</h1>
-      <div className="roadmap-container">
-        {renderTree(careerData)}
-      </div>
+    <div className="container d-flex flex-column align-items-center justify-content-start h-100 py-5">
+      <p className="h1 mb-5 font-weight-bold">Career Roadmap</p>
+      {error ? (
+        <p className="text-danger">{error}</p>
+      ) : (
+        <>
+          <div className="mb-5">{renderNode("post_10th")}</div>
+          <div className="mb-5">{renderNode("post_intermediate")}</div>
+          <div className="mb-5">{renderNode("post_diploma")}</div>
+          <div className="mb-5">{renderNode("post_btech")}</div>
+        </>
+      )}
     </div>
   );
 };

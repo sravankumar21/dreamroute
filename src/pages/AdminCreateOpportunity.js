@@ -1,6 +1,7 @@
 // src/components/CreateOpportunity.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../styles/AdminCreateOpportunity.css';
 
 const AdminCreateOpportunity = () => {
   const [formData, setFormData] = useState({
@@ -39,14 +40,15 @@ const AdminCreateOpportunity = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Create Opportunity</h2>
+    <form className="addjob-form" onSubmit={handleSubmit}>
+      <h2 className="addjob-form-title">Create Opportunity</h2>
       <input
         type="text"
         name="company"
         placeholder="Company"
         value={formData.company}
         onChange={handleChange}
+        className="addjob-form-input"
         required
       />
       <input
@@ -55,21 +57,24 @@ const AdminCreateOpportunity = () => {
         placeholder="Role"
         value={formData.role}
         onChange={handleChange}
+        className="addjob-form-input"
         required
       />
-      <label>
+      <label className="addjob-form-checkbox-label">
         Full Time:
         <input
           type="checkbox"
           name="fullTime"
           checked={formData.fullTime}
           onChange={handleChange}
+          className="addjob-form-checkbox"
         />
       </label>
       <select
         name="type"
         value={formData.type}
         onChange={handleChange}
+        className="addjob-form-select"
         required
       >
         <option value="internship">Internship</option>
@@ -81,6 +86,7 @@ const AdminCreateOpportunity = () => {
         placeholder="Location"
         value={formData.location}
         onChange={handleChange}
+        className="addjob-form-input"
         required
       />
       <input
@@ -89,9 +95,10 @@ const AdminCreateOpportunity = () => {
         placeholder="Application Link"
         value={formData.applicationLink}
         onChange={handleChange}
+        className="addjob-form-input"
         required
       />
-      <button type="submit">Post Opportunity</button>
+      <button type="submit" className="addjob-form-button">Post Opportunity</button>
     </form>
   );
 };

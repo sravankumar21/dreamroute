@@ -6,7 +6,7 @@
   }
   
   .admin-heading {
-    margin-top: 20px;
+    margin-top: 45px;
     font-size: 2rem;
     color: #333;
   }
@@ -21,10 +21,11 @@
     width: 400px; /* Adjust as needed */
     height: auto;
     border-radius: 5%;
-    margin-top: 2rem;
+    margin-top: 6rem;
   }
   
   .feature-cards-container {
+    margin-top: 4rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

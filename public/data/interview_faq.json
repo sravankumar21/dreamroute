@@ -1,0 +1,46 @@
+{
+    "intents": [
+      {
+        "tag": "about_yourself",
+        "patterns": [
+          "Tell me about yourself",
+          "How can I introduce myself?",
+          "Can you give me a sample introduction?",
+          "What should I say about myself?",
+          "Describe yourself briefly."
+        ],
+        "responses": [
+          "When answering 'Tell me about yourself', start with a brief introduction including your name and background, highlight your relevant experience or skills, and end with why you are excited about this opportunity. Keep it concise and relevant to the job role.",
+          "Sample Answer: 'My name is Jane Doe, and I have a degree in Computer Science from XYZ University. I have been working as a software developer for the past three years, specializing in web applications. I’m passionate about creating user-friendly software and am excited about the opportunity to contribute to your team’s innovative projects.'",
+          "A good approach is to provide a quick overview of your professional background, key strengths, and a statement about your enthusiasm for the role you are applying for."
+        ]
+      },
+      {
+        "tag": "strengths",
+        "patterns": [
+          "What are your strengths?",
+          "Can you tell me about your strengths?",
+          "What do you consider your greatest strength?",
+          "List some of your strengths."
+        ],
+        "responses": [
+          "When discussing your strengths, focus on qualities that are relevant to the job. For instance, 'I am very detail-oriented and organized, which helps me manage multiple projects efficiently and deliver results on time.'",
+          "Sample Answer: 'One of my greatest strengths is my ability to adapt quickly to new situations. For example, in my previous role, I had to learn a completely new software system in just a few weeks, and I was able to become the team expert on it.'"
+        ]
+      },
+      {
+        "tag": "weaknesses",
+        "patterns": [
+          "What are your weaknesses?",
+          "Tell me about your weaknesses.",
+          "Can you list some weaknesses?",
+          "What do you consider your biggest weakness?"
+        ],
+        "responses": [
+          "It's best to choose a weakness that you are actively working on improving. For instance, 'I tend to be a perfectionist, which sometimes slows me down, but I've been learning to balance my attention to detail with deadlines.'",
+          "Sample Answer: 'One of my weaknesses has been public speaking, but I've been taking courses to improve and now feel much more confident presenting to larger groups.'"
+        ]
+      }
+    ]
+  }
+  

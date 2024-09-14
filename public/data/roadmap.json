@@ -1,0 +1,93 @@
+{
+    "post_10th": {
+      "intermediate": {
+        "mpc": {
+          "engineering": ["B.E.", "B.Tech"],
+          "bachelor_degrees": ["B.Sc. Computer Science", "B.Sc. Mathematics"]
+        },
+        "bipc": {
+          "medical": ["MBBS", "BDS", "BAMS", "BHMS"],
+          "bachelor_degrees": ["B.Sc. Biology", "B.Sc. Biotechnology", "B.Pharmacy"]
+        },
+        "cec": {
+          "commerce": ["B.Com", "BBA"],
+          "arts": ["BA Economics", "BA Political Science"]
+        },
+        "mec": {
+          "commerce": ["B.Com", "BBA"],
+          "bachelor_degrees": ["B.Sc. Statistics"]
+        },
+        "hec": {
+          "arts": ["BA History", "BA Economics", "BA Political Science"]
+        }
+      },
+      "diploma": {
+        "cse": {
+          "next_steps": ["B.Tech CSE", "B.Sc. IT"]
+        },
+        "ece": {
+          "next_steps": ["B.Tech ECE", "B.Sc. Electronics"]
+        },
+        "eee": {
+          "next_steps": ["B.Tech EEE", "B.Sc. Electrical"]
+        },
+        "mech": {
+          "next_steps": ["B.Tech Mechanical", "B.Sc. Mechanical"]
+        },
+        "civil": {
+          "next_steps": ["B.Tech Civil", "B.Sc. Civil"]
+        }
+      }
+    },
+    "post_intermediate": {
+        "engineering": {
+            "streams": {
+              "be": {
+                "branches": ["CSE", "ECE", "EEE", "Mechanical", "Civil"]
+              },
+              "btech": {
+                "branches": ["CSE", "ECE", "EEE", "Mechanical", "Civil"]
+              }
+            }
+          },
+      "medical": {
+        "courses": ["MBBS", "BDS", "BAMS", "BHMS", "BPT"]
+      },
+      "bachelor_degrees": {
+        "fields": {
+          "science": ["B.Sc. Physics", "B.Sc. Chemistry", "B.Sc. Mathematics"],
+          "commerce": ["B.Com General", "B.Com Computers", "BBA"],
+          "arts": ["BA History", "BA Political Science", "BA Literature"]
+        }
+      }
+    },
+    "post_diploma": {
+      "btech_lateral_entry": {
+        "branches": ["CSE", "ECE", "EEE", "Mechanical", "Civil"]
+      },
+      "jobs": {
+        "fields": ["Junior Engineer", "Technician", "Lab Assistant"]
+      }
+    },
+    "post_btech": {
+      "higher_studies": {
+        "mtech": {
+          "specializations": ["CSE", "ECE", "EEE", "Mechanical", "Civil"]
+        },
+        "mba": {
+          "specializations": ["Marketing", "Finance", "Operations", "HR", "IT"]
+        },
+        "masters": {
+          "fields": ["M.Sc. Computer Science", "M.Sc. Mathematics", "M.Sc. Physics"]
+        }
+      },
+      "jobs": {
+        "fields": ["Software Engineer", "Project Manager", "Data Scientist", "Consultant"]
+      },
+      "upsc": {
+        "path": ["Preliminary Exam", "Main Exam", "Interview"],
+        "fields": ["IAS", "IPS", "IFS", "IRS"]
+      }
+    }
+  }
+  

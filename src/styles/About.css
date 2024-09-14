@@ -1,0 +1,30 @@
+/* src/About.css */
+.subheading {
+    color: #555;
+    font-weight: bold;
+  }
+  
+  .team-member {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .team-member:hover {
+    transform: scale(1.05);
+  }
+  
+  .team-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #007bff;
+  }
+  
+  .team-name {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  

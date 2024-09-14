@@ -1,0 +1,121 @@
+/* src/styles/InterviewPreparation.css */
+.interview-preparation {
+    display: flex;
+    flex-direction: column;
+    width: 80vw; /* Set the width to 80% of the viewport width */
+    height: 100vh; /* Full viewport height */
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    justify-content: center; /* Center the container vertically */
+    align-items: center; /* Center the container horizontally */
+  }
+  
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh; /* Set a height for the chat container */
+    width: 90%; /* Width for the chat container */
+    max-width: 1200px; /* Maximum width to maintain a reasonable size */
+    margin: 30 auto; /* Center horizontally */
+    margin-left: 22%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  .chat-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 2px solid #ddd;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .chat-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .chat-title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .chat-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 75%;
+    color: white;
+  }
+  
+  .chat-message.user {
+    background-color: #4a90e2;
+    align-self: flex-end;
+  }
+  
+  .chat-message.bot {
+    background-color: #e0e0e0;
+    color: #333;
+    align-self: flex-start;
+  }
+  
+  .input-container {
+    display: flex;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 2px solid #ddd;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  
+  .btn-submit {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-submit:hover {
+    background-color: #357abd;
+  }
+  
+  .btn-guide {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 15px auto;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-guide:hover {
+    background-color: #e64a19;
+  }
+  

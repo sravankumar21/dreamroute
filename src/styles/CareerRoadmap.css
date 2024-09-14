@@ -1,0 +1,104 @@
+/* Add this CSS to CareerRoadmap.css */
+
+/* General container padding */
+.roadmapcontainer {
+    padding: 2rem; /* Adjust the padding for the overall container */
+    background-color: #6c757d;
+  }
+  
+  .btn {
+    margin-bottom: 1rem; /* Add space below buttons */
+  }
+  
+  .d-flex {
+    margin-bottom: 1rem; /* Add space between flex containers */
+  }
+  
+  .mt-2 {
+    margin-top: 1.5rem; /* Adjust the space above child nodes */
+  }
+  
+  .mb-5 {
+    margin-bottom: 3rem; /* Increase space between top-level nodes */
+  }
+  
+ /* Ensure buttons have visible colors with these overrides */
+.btn-primary {
+    color: white !important; /* Set text color */
+    background-color: #007bff !important; /* Set primary color */
+    border-color: #007bff !important; /* Set border to match */
+}
+
+.btn-success {
+    color: white !important;
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+.btn-danger {
+    color: white !important;
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+.btn-info {
+    color: white !important;
+    background-color: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+}
+
+.btn-warning {
+    color: white !important;
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+}
+
+.btn-secondary {
+    color: white !important;
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+}
+
+.btn-light {
+    color: #343a40 !important; /* Dark text on light background */
+    background-color: #f8f9fa !important; /* Light button color */
+    border-color: #f8f9fa !important;
+}
+
+.btn-dark {
+    color: white !important;
+    background-color: #343a40 !important;
+    border-color: #343a40 !important;
+}
+
+/* Hover effects for better UX */
+.btn:hover {
+    filter: brightness(0.9); /* Slightly darken on hover */
+}
+
+/* Add some padding and spacing adjustments */
+.roadmapcontainer {
+    padding: 2rem; /* Adjust the padding for the overall container */
+}
+
+.btn {
+    margin-bottom: 1rem; /* Add space below buttons */
+}
+
+.d-flex {
+    margin-bottom: 1rem; /* Add space between flex containers */
+}
+
+.mt-2 {
+    margin-top: 1.5rem; /* Adjust the space above child nodes */
+}
+
+.mb-5 {
+    margin-bottom: 3rem; /* Increase space between top-level nodes */
+}
+
+/* Add some space around child nodes */
+.d-flex.flex-wrap > div {
+    margin-right: 1rem; /* Adjust space between child nodes */
+    margin-bottom: 1rem; /* Adjust space below child nodes */
+}

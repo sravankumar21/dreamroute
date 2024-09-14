@@ -1,0 +1,130 @@
+/* src/styles/CareerCoach.css */
+.career-coach {
+    display: flex;
+    height: 100vh;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 300px;
+    background-color: #00bbff;
+    color: white;
+    border-right: 2px solid #ddd;
+  }
+  
+  .coach-icon {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 15px;
+    margin-top: 65px;
+  }
+  
+  .coach-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    background-color: #fff;
+    color: #4a90e2;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn-success {
+    background-color: #357abd;
+    color: white;
+  }
+  
+  .btn-danger {
+    background-color: #357abd;
+    color: white;
+  }
+  
+  .btn-guide {
+    background-color: #e29a84;
+    color: white;
+  }
+  
+  .btn-success:hover, .btn-danger:hover, .btn-guide:hover {
+    background-color: #357abd;
+  }
+  
+  .chat2-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .chat-box {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
+  .chat-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    color: white;
+  }
+  
+  .chat-message.user {
+    background-color: #4a90e2;
+    align-self: flex-end;
+  }
+  
+  .chat-message.bot {
+    background-color: #e0e0e0;
+    color: #333;
+    align-self: flex-start;
+  }
+  
+  .input-container {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  
+  .btn-submit {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-submit:hover {
+    background-color: #357abd;
+  }
+  

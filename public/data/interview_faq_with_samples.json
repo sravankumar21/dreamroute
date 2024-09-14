@@ -1,0 +1,179 @@
+[
+    {
+        "tag": "greeting",
+        "patterns": [
+            "Hello",
+            "Hi",
+            "Hey",
+            "Good morning",
+            "Good afternoon",
+            "Good evening"
+        ],
+        "responses": [
+            "Hello! How can I help you today?",
+            "Hi there! How can I assist you with your interview preparation?",
+            "Hey! Ready to crack your interview?"
+        ]
+    },
+    {
+        "tag": "goodbye",
+        "patterns": [
+            "Bye",
+            "See you later",
+            "Goodbye",
+            "Thank you"
+        ],
+        "responses": [
+            "See you later! Take care!",
+            "Goodbye! Wishing you all the best for your interview!",
+            "Take care! Feel free to come back if you have more questions!"
+        ]
+    },
+    {
+        "tag": "thanks",
+        "patterns": [
+            "Thanks",
+            "Thank you",
+            "That's helpful",
+            "Awesome, thanks",
+            "Thanks for the help"
+        ],
+        "responses": [
+            "You're welcome! Let me know if you have any other questions.",
+            "Anytime! I'm here to help you ace your interview!",
+            "You're welcome! Good luck with your preparation!"
+        ]
+    },
+    {
+        "tag": "name",
+        "patterns": [
+            "What is your name?",
+            "Who are you?",
+            "Can you tell me your name?"
+        ],
+        "responses": [
+            "I'm your interview prep assistant, here to help you crack your interviews!",
+            "I'm your friendly chatbot, ready to assist with interview preparation!"
+        ]
+    },
+    {
+        "tag": "tell_me_about_yourself",
+        "patterns": [
+            "Tell me about yourself",
+            "How do I answer tell me about yourself?",
+            "What to say for tell me about yourself?"
+        ],
+        "responses": [
+            "When answering 'Tell me about yourself', start with a brief introduction including your name and background, highlight your relevant experience or skills, and end with why you are excited about this opportunity. Keep it concise and relevant to the job role.",
+            "Sample Answer: 'My name is Jane Doe, and I have a degree in Computer Science from XYZ University. I have been working as a software developer for the past three years, specializing in web applications. I’m passionate about creating user-friendly software and am excited about the opportunity to contribute to your team’s innovative projects.'"
+        ]
+    },
+    {
+        "tag": "strengths",
+        "patterns": [
+            "What are your strengths?",
+            "How to answer strengths?",
+            "Can you list your strengths?"
+        ],
+        "responses": [
+            "When discussing strengths, mention skills that are relevant to the job and provide examples from your past experiences that demonstrate these strengths. For example, 'I am a quick learner, as seen in my last project where I quickly adapted to new technologies to meet project goals.'",
+            "Sample Answer: 'One of my key strengths is problem-solving. For instance, in my previous role, I developed a new process that improved team efficiency by 20%. I enjoy tackling complex issues and finding innovative solutions, which has always been a key aspect of my professional growth.'"
+        ]
+    },
+    {
+        "tag": "weaknesses",
+        "patterns": [
+            "What are your weaknesses?",
+            "How do I discuss weaknesses?",
+            "Can you list your weaknesses?"
+        ],
+        "responses": [
+            "When discussing weaknesses, choose a real weakness that you have been working to improve. Make sure it’s not critical to the job role. For example, 'I tend to be a perfectionist, but I have been learning to prioritize tasks and focus on completing them on time.'",
+            "Sample Answer: 'One of my weaknesses is my tendency to overanalyze problems. However, I have been working on this by setting time limits for decision-making and using checklists to keep myself on track. This approach has helped me become more efficient without compromising quality.'"
+        ]
+    },
+    {
+        "tag": "why_this_company",
+        "patterns": [
+            "Why do you want to work here?",
+            "Why this company?",
+            "What makes you interested in this company?"
+        ],
+        "responses": [
+            "To answer 'Why this company?', research the company’s culture, values, and recent achievements. Link your personal values and career goals with the company’s mission. For example, 'I admire this company's commitment to innovation and continuous improvement, and I’m excited about the opportunity to contribute to these efforts.'",
+            "Sample Answer: 'I am impressed by your company’s commitment to sustainability and cutting-edge technology. I am particularly excited about the recent projects in renewable energy that align with my passion for environmental conservation. I believe my background in engineering and project management would be a great fit for your team.'"
+        ]
+    },
+    {
+        "tag": "salary_expectations",
+        "patterns": [
+            "What are your salary expectations?",
+            "How to answer salary expectations?",
+            "What salary do you expect?"
+        ],
+        "responses": [
+            "When asked about salary expectations, it’s best to provide a range based on your research of the industry standards. You can say, 'Based on my research and experience, I expect a salary in the range of X to Y. However, I’m flexible and open to negotiation.'",
+            "Sample Answer: 'Based on my research and experience, I would expect a salary range between $70,000 and $80,000. However, I am flexible and open to discussing this further based on the total compensation package and other benefits.'"
+        ]
+    },
+    {
+        "tag": "future_goals",
+        "patterns": [
+            "Where do you see yourself in five years?",
+            "What are your future goals?",
+            "Tell me about your career aspirations"
+        ],
+        "responses": [
+            "When discussing future goals, align them with the company’s growth and opportunities. For example, 'In five years, I see myself as an expert in my field, taking on more leadership responsibilities and contributing to the strategic goals of the company.'",
+            "Sample Answer: 'In five years, I see myself leading a team of developers and managing larger-scale projects. I aim to enhance my technical skills further and contribute significantly to the company’s strategic goals. I am excited about the growth opportunities and how I can contribute to the company’s success.'"
+        ]
+    },
+    {
+        "tag": "handle_stress",
+        "patterns": [
+            "How do you handle stress?",
+            "What is your approach to stress management?",
+            "Can you work under pressure?"
+        ],
+        "responses": [
+            "To answer this, mention techniques you use to stay calm and productive under pressure, like prioritizing tasks, taking short breaks, or using stress-relief techniques. For example, 'I handle stress by staying organized and focusing on solving the problem at hand, which helps me maintain a calm and productive work environment.'",
+            "Sample Answer: 'I manage stress by prioritizing my tasks and breaking them into manageable steps. I also make sure to take short breaks to clear my mind and recharge. During high-pressure situations, I focus on maintaining a positive attitude and tackling one task at a time to ensure high-quality outcomes.'"
+        ]
+    },
+    {
+        "tag": "teamwork",
+        "patterns": [
+            "Are you a team player?",
+            "How do you work in a team?",
+            "Can you work well with others?"
+        ],
+        "responses": [
+            "For teamwork questions, highlight your ability to collaborate, communicate effectively, and contribute to team success. Example: 'I enjoy working in a team and believe that collaboration brings out the best ideas. I always strive to communicate clearly and support my teammates.'",
+            "Sample Answer: 'Yes, I am definitely a team player. I believe that effective communication and collaboration are key to a successful project. In my previous role, I worked closely with cross-functional teams and contributed ideas that helped us achieve our project goals ahead of schedule.'"
+        ]
+    },
+    {
+        "tag": "work_conflict",
+        "patterns": [
+            "How do you handle conflict at work?",
+            "Can you describe a time you faced a conflict at work?",
+            "What is your approach to resolving work conflicts?"
+        ],
+        "responses": [
+            "When discussing conflict resolution, emphasize your problem-solving skills and ability to remain calm. For example, 'I handle conflicts by listening to all parties, identifying the root cause, and working collaboratively to find a solution. I believe in addressing issues directly and respectfully.'",
+            "Sample Answer: 'When I encounter conflicts, I first seek to understand the other party's perspective. I then communicate openly and work together to find a solution that addresses everyone’s concerns. For example, in a previous project, I mediated a disagreement between team members by facilitating a discussion that led to a mutually agreeable resolution.'"
+        ]
+    },
+    {
+        "tag": "motivation",
+        "patterns": [
+            "What motivates you?",
+            "How do you stay motivated?",
+            "What drives you to do your best?"
+        ],
+        "responses": [
+            "To answer this, focus on what drives you in your professional life. For example, 'I’m motivated by challenges that push me to grow and learn new skills. I also find motivation in achieving goals and contributing to the success of my team.'",
+            "Sample Answer: 'I stay motivated by setting clear goals and tracking my progress. I thrive on challenges and enjoy working on projects that push me to learn and grow. Additionally, seeing the positive impact of my work on the team and company drives me to continually strive for excellence.'"
+        ]
+    }
+]
