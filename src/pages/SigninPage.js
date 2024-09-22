@@ -63,11 +63,11 @@ const SignInPage = ({ onClose }) => {
               fullWidth
               margin="normal"
               autoComplete="on"
-              InputProps={{
-                startAdornment: (
-                  <i className="gfg-icon gfg-icon-2 gfg-icon-grey-profile" />
-                ),
-              }}
+            //   InputProps={{
+            //     startAdornment: (
+            //       <i className="gfg-icon gfg-icon-2 gfg-icon-grey-profile" />
+            //     ),
+            //   }}
             />
             <TextField
               label="Password"
@@ -75,11 +75,11 @@ const SignInPage = ({ onClose }) => {
               fullWidth
               margin="normal"
               autoComplete="on"
-              InputProps={{
-                startAdornment: (
-                  <i className="gfg-icon gfg-icon-2 gfg-icon-grey-lock" />
-                ),
-              }}
+            //   InputProps={{
+            //     startAdornment: (
+            //       <i className="gfg-icon gfg-icon-2 gfg-icon-grey-lock" />
+            //     ),
+            //   }}
             />
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginY: 2 }}>
               <div>

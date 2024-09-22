@@ -17,6 +17,7 @@ const AdminSkillEvaluator = () => {
     { name: 'Operating Systems', type: 'tech' },
     { name: 'Database Management System', type: 'tech' },
     { name: 'Data Structures and Algorithms', type: 'tech' }
+    
   ];
 
   const handleChange = (e) => {

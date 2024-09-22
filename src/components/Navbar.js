@@ -57,8 +57,10 @@ const Navbar = () => {
         <div className="navbar-center">
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/about" className="nav-link">About</Link>
-          <button className="nav-link" onClick={handleScrollToFeatures}>Features</button> {/* Change Link to button */}
+          <Link to="/blogs" className="nav-link">Blogs</Link>
+          <button className="nav-link" onClick={handleScrollToFeatures}>More Features</button> {/* Change Link to button */}
         </div>
+       
         <div className="navbar-end">
           <div className="dropdown">
             <button className="user-icon-button" onClick={toggleDropdown}>

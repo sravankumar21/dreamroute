@@ -1,0 +1,94 @@
+.blog-page {
+    background-color: white;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .blog-page-heading {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .blogs-container {
+    display: flex;
+    flex-direction: column; /* Single column layout */
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .blog-card {
+    background-color: #f9f9f9; /* Light background for the card */
+    width: 100%;
+    max-width: 900px; /* Increased max width */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: left;
+    transition: height 0.3s ease; /* Smooth transition */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .blog-card.expanded {
+    height: auto; /* Allow height to adjust based on content */
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .blog-image {
+    width: 100%; /* Full width */
+    height: 250px; /* Decreased height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .blog-date {
+    font-size: 0.9em;
+    color: #fff; /* White color for better contrast */
+    position: absolute;
+    top: 20px; /* Margin from top */
+    right: 40px; /* Margin from right */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px 10px; /* Padding for better readability */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .blog-title {
+    font-size: 2em;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .blog-content {
+    color: #444;
+    font-size: 1.1em;
+    line-height: 1.4;
+  }
+  
+  .blog-full-content {
+    display: block; /* Ensures full content is block level */
+    margin-top: 10px; /* Space above full content */
+  }
+  
+  .expand-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .expand-button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -18,6 +18,8 @@ import InterviewPreparation from './pages/InterviewPreparation';
 import About from './components/About';
 import CareerRoadmapGraphView from './pages/CareerRoadmapGraphView';
 import SignInPage from './pages/SigninPage';
+import BlogPage from './pages/BlogPage';
+import ResourceLibrary from './pages/ResourceLibrary';
 
 function App() {
   return (
@@ -42,6 +44,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/graphview" element={<CareerRoadmapGraphView />} />
           <Route path="/signin" element={<SignInPage />} />
+          <Route path="/blogs" element={<BlogPage />} />
+          <Route path="/resource-library" element={<ResourceLibrary />} />
         </Routes>
       </div>
     </Router>

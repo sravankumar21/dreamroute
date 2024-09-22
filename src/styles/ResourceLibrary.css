@@ -1,0 +1,184 @@
+/* General Styles */
+.resource-library {
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+  }
+  
+  .library-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000; /* Keeping text black for readability */
+  }
+  
+  .resource-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  /* Card Styles */
+  .resource-cards {
+    margin-top: 20px;
+    padding-left: 30px;  /* Added margin on the left */
+    padding-right: 30px; /* Added margin on the right */
+  }
+  
+  .resource-card {
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #ffffff; /* White background */
+    border: none;
+    padding: 20px;
+    margin-left: 15px;   /* Added left margin */
+    margin-right: 15px;  /* Added right margin */
+  }
+  
+  .resource-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .resource-card .card-img-top {
+    height: 160px; /* Adjusted height */
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .resource-card .card-body {
+    text-align: center;
+  }
+  
+  .resource-card .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .resource-card .card-text {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 15px;
+  }
+  
+  .resource-card .btn {
+    font-weight: 600;
+    background-color: #000; /* Black button */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    width: 100%; /* Button now spans full width of the card */
+  }
+  
+  .resource-card .btn:hover {
+    background-color: #333; /* Darker hover effect */
+  }
+  
+  /* Practice Section */
+  .practice-card {
+    margin-bottom: 40px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-left: 20px;   /* Left margin for practice card */
+    margin-right: 20px;  /* Right margin for practice card */
+    padding-left: 30px;  /* Added padding for better alignment */
+    padding-right: 30px;
+  }
+  
+  .practice-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .practice-card img {
+    width: 80px; /* Fixed width for all practice images */
+    height: 80px; /* Fixed height for all practice images */
+    object-fit: contain; /* Ensure different sizes are contained within this size */
+    margin-right: 20px;
+  }
+  
+  .practice-card .practice-info {
+    flex-grow: 1;
+  }
+  
+  .practice-card .practice-info h5 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000;
+  }
+  
+  .practice-card .practice-info p {
+    font-size: 1rem;
+    color: #000;
+  }
+  
+  .practice-card .btn {
+    background-color: #000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+  }
+  
+  .practice-card .btn:hover {
+    background-color: #333;
+  }
+  
+  /* Books Section */
+  .books-card {
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .books-card img {
+    height: 180px;
+    object-fit: contain;
+  }
+  
+  .books-card .card-title {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    color: #000;
+  }
+  
+  .books-card .card-text {
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .resource-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .practice-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .practice-card img {
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* Adjustments for Margins and Padding */
+  .resource-cards .col-md-4 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .resource-cards {
+    padding-left: 30px;  /* Adjusted margins */
+    padding-right: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  

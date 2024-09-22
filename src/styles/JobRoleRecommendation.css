@@ -1,5 +1,5 @@
 .job-container {
-  max-width: 800px;
+  max-width: 1300px; /* Increased width for better layout */
   margin: auto;
   margin-top: 5%;
   padding: 40px;
@@ -9,17 +9,52 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.available-skills {
-  margin-top: 20px;
+.job-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
-.skill-button-container {
+.job-resume-upload {
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  height: 120px; /* Reduced height for resume upload */
+  overflow-y: auto; /* Allow scrolling if content exceeds */
+}
+
+.job-available-skills {
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  height: 550px; /* Height for available skills */
+  overflow-y: auto; /* Allow scrolling if content exceeds */
+}
+
+.job-available-skills {
+  margin-right: 0; /* Remove margin for the last element */
+}
+
+.divider {
+  width: 2px;
+  background-color: #ccc;
+  margin: 0 20px;
+}
+
+.job-skill-button-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.skill-button button {
+.job-skill-button button {
   padding: 10px 15px;
   margin: 5px;
   border: none;
@@ -28,18 +63,18 @@
   transition: background-color 0.3s;
 }
 
-.skill-button button.add {
+.job-skill-button button.add {
   background-color: #28a745;
   color: white;
 }
 
-.skill-button button.remove {
-  background-color: #dc3545;
-  color: white;
-}
-
-.skill-button button:hover {
-  opacity: 0.8;
+.job-remove-skill {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-left: 5px;
 }
 
 textarea {
@@ -53,36 +88,46 @@ textarea {
   line-height: 1.5;
 }
 
-button[type="submit"] {
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.job-recommend-button,
+.job-clear-button,
+.job-refresh-button  {
   background-color: #007bff;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  margin-top: 15px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-button[type="submit"]:hover {
+
+.job-recommend-button:hover,
+.job-refresh-button:hover,
+.job-clear-button:hover {
   background-color: #0056b3;
 }
 
-.recommendation-section {
+.job-recommendation-section {
   margin-top: 20px;
   padding: 10px;
   border-top: 1px solid #ddd;
 }
 
-.selected-skills {
+.job-selected-skills {
   margin-bottom: 1em;
 }
 
-.skill-tags {
+.job-skill-tags {
   margin-bottom: 1em;
 }
 
-.skill-tag {
+.job-skill-tag {
   display: inline-block;
   background-color: #f0f0f0;
   border: 1px solid #ccc;
@@ -91,17 +136,4 @@ button[type="submit"]:hover {
   margin: 0.2em;
   font-size: 0.9em;
   position: relative;
-}
-
-.remove-skill {
-  background: none;
-  border: none;
-  color: black;
-  cursor: pointer;
-  font-size: 2.5 em;
-  margin-right: -12%;
-  position: absolute;
-  right: 0.5em;
-  top: 50%;
-  transform: translateY(-50%);
 }

@@ -1,22 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import '../styles/ExamPage.css'; // Import your CSS file
+import '../styles/ExamPage.css';
 
 const ExamPage = () => {
   const { domain } = useParams();
   const [questions, setQuestions] = useState([]);
-  const [skillLevel, setSkillLevel] = useState('beginner');
-  const [score, setScore] = useState(null); // Initially null to indicate not yet submitted
+  const [skillLevel, setSkillLevel] = useState('beginner'); // Default skill level
+  const [aptitudeTopic, setAptitudeTopic] = useState('Aptitude'); // Default topic for Aptitude
+  const [isAptitude, setIsAptitude] = useState(false); // Track if the current domain is Aptitude
+  const [score, setScore] = useState(null);
   const [showTutorials, setShowTutorials] = useState(false);
-  const [answers, setAnswers] = useState({}); // To store user's answers
-  const [correctAnswers, setCorrectAnswers] = useState({}); // To store correct answers for incorrect responses
+  const [answers, setAnswers] = useState({});
+  const [correctAnswers, setCorrectAnswers] = useState({});
 
   useEffect(() => {
-    // Fetch questions based on domain and skill level
+    // Check if the domain is aptitude
+    setIsAptitude(domain.toLowerCase() === 'aptitude');
+
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/api/questions/${domain}/${skillLevel}`);
+        const level = isAptitude ? aptitudeTopic : skillLevel; // Use topic for Aptitude
+        const response = await axios.get(`http://localhost:4000/api/questions/${domain}/${level}`);
         setQuestions(response.data);
       } catch (error) {
         console.error('Error fetching questions', error);
@@ -24,10 +29,14 @@ const ExamPage = () => {
     };
 
     fetchQuestions();
-  }, [domain, skillLevel]);
+  }, [domain, skillLevel, aptitudeTopic, isAptitude]);
 
   const handleSkillLevelChange = (level) => {
     setSkillLevel(level);
+  };
+
+  const handleAptitudeTopicChange = (topic) => {
+    setAptitudeTopic(topic);
   };
 
   const handleAnswerChange = (questionIndex, answer) => {
@@ -45,43 +54,33 @@ const ExamPage = () => {
       if (answers[index] === question.correctAnswer) {
         currentScore++;
       } else {
-        // Store the correct answer if the selected answer is incorrect
         tempCorrectAnswers[index] = question.correctAnswer;
       }
     });
 
-    // Update the score and correct answers
     setScore(currentScore);
     setCorrectAnswers(tempCorrectAnswers);
-
-    // Show tutorials if the score is less than a threshold
     setShowTutorials(currentScore < 3);
   };
 
   return (
     <div className="exam-page">
       <h1>Exam for {domain}</h1>
-      
-      <div className="skill-level-buttons">
-        <button
-          onClick={() => handleSkillLevelChange('beginner')}
-          className={skillLevel === 'beginner' ? 'active' : ''}
-        >
-          Beginner
-        </button>
-        <button
-          onClick={() => handleSkillLevelChange('pro')}
-          className={skillLevel === 'pro' ? 'active' : ''}
-        >
-          Pro
-        </button>
-        <button
-          onClick={() => handleSkillLevelChange('advanced')}
-          className={skillLevel === 'advanced' ? 'active' : ''}
-        >
-          Advanced
-        </button>
-      </div>
+
+      {isAptitude ? (
+        <div className="aptitude-topic-buttons">
+          <button onClick={() => handleAptitudeTopicChange('Aptitude')} className={aptitudeTopic === 'Aptitude' ? 'active' : ''}>Aptitude</button>
+          <button onClick={() => handleAptitudeTopicChange('Reasoning')} className={aptitudeTopic === 'Reasoning' ? 'active' : ''}>Reasoning</button>
+          <button onClick={() => handleAptitudeTopicChange('Time and Work')} className={aptitudeTopic === 'Time and Work' ? 'active' : ''}>Time and Work</button>
+          {/* Add more aptitude topics as needed */}
+        </div>
+      ) : (
+        <div className="skill-level-buttons">
+          <button onClick={() => handleSkillLevelChange('beginner')} className={skillLevel === 'beginner' ? 'active' : ''}>Beginner</button>
+          <button onClick={() => handleSkillLevelChange('pro')} className={skillLevel === 'pro' ? 'active' : ''}>Pro</button>
+          <button onClick={() => handleSkillLevelChange('advanced')} className={skillLevel === 'advanced' ? 'active' : ''}>Advanced</button>
+        </div>
+      )}
 
       <div className="questions-container">
         {questions.map((question, index) => (
@@ -100,7 +99,6 @@ const ExamPage = () => {
                 <label htmlFor={`q${index}o${idx}`}>{option}</label>
               </div>
             ))}
-            {/* Display correct answer only after submission */}
             {score !== null && answers[index] !== undefined && answers[index] !== questions[index].correctAnswer && (
               <p className="correct-answer">
                 Correct Answer: {correctAnswers[index]}

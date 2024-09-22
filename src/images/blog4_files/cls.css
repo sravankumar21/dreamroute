@@ -1,0 +1,45 @@
+body {
+	--fsAddBuffer: 22px;
+}
+[id='wallpaperaccess_siderail_right'],
+[id='wallpaperaccess_leaderboard_ATF'],
+[id='wallpaperaccess_incontent_mobile'],
+[id='wallpaperaccess_siderail_left'],
+[id='wallpaperaccess_download_mrec'],
+[id='wallpaperaccess_siderail_right2'] {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: calc(var(--height) + var(--fsAddBuffer));
+	width: 100%;
+}
+[id='wallpaperaccess_download_mrec'] {
+		--height: 280px;
+}
+[id='wallpaperaccess_incontent_mobile'] {
+		--height: 600px;
+}
+[id='wallpaperaccess_leaderboard_ATF'] {
+		--height: 280px;
+}
+@media only screen and (min-width: 768px) {
+	[id='wallpaperaccess_download_mrec'] {
+		--height: 280px;
+	}
+	[id='wallpaperaccess_incontent_mobile'] {
+		display: none; 
+	}
+	[id='wallpaperaccess_leaderboard_ATF'] {
+		--height: 280px;
+	}
+	[id='wallpaperaccess_siderail_left'] {
+		--height: 600px;
+	}
+	[id='wallpaperaccess_siderail_right'] {
+		--height: 280px;
+	}
+	[id='wallpaperaccess_siderail_right2'] {
+		--height: 280px;
+	}
+}

@@ -24,6 +24,7 @@ const domains = [
   { name: 'Digital Marketing', type: 'non-tech', image: digitalMarketingImage },
   { name: 'Content Writing', type: 'non-tech', image: contentWritingImage },
   { name: 'Project Management', type: 'non-tech', image: projectManagementImage },
+  { name: 'Aptitude', type: 'aptitude', image: webDevImage }, // Add Aptitude
 ];
 
 const StudentSkillEvaluator = () => {
@@ -54,6 +55,12 @@ const StudentSkillEvaluator = () => {
           onClick={() => handleFilterChange('non-tech')}
         >
           Non-Tech Domains
+        </button>
+        <button 
+          className={`filter-button ${filter === 'aptitude' ? 'active' : ''}`} 
+          onClick={() => handleFilterChange('aptitude')}
+        >
+          Aptitude
         </button>
       </div>
       
