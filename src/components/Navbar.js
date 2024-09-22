@@ -1,4 +1,3 @@
-// Navbar.js
 import React, { useState, useEffect } from 'react';
 import { PiPathBold } from "react-icons/pi";
 import { Dialog, DialogTitle, DialogContent, Button } from '@mui/material';
@@ -14,8 +13,10 @@ const Navbar = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(setUser);
-    return () => unsubscribe();
+    const token = localStorage.getItem('token');
+    if (token) {
+      setUser({ token }); // User is considered signed in if a token exists
+    }
   }, []);
 
   const toggleDropdown = () => {
@@ -27,17 +28,17 @@ const Navbar = () => {
     setIsDropdownOpen(false); // Close dropdown when dialog opens
   };
 
-  const handleSignOut = async () => {
-    try {
-      await signOut(auth);
-      setUser(null); // Update user state after sign-out
-    } catch (error) {
-      console.error('Sign Out Error:', error);
-    }
+  const handleSignOut = () => {
+    localStorage.removeItem('token'); // Remove token from localStorage on sign out
+    setUser(null); // Reset user state
   };
 
   const handleCloseDialog = () => {
     setIsDialogOpen(false);
+  };
+
+  const handleUserUpdate = (userData) => {
+    setUser(userData); // Update user state with user data
   };
 
   const handleScrollToFeatures = () => {
@@ -58,7 +59,7 @@ const Navbar = () => {
           <Link to="/" className="nav-link">Home</Link>
           <Link to="/about" className="nav-link">About</Link>
           <Link to="/blogs" className="nav-link">Blogs</Link>
-          <button className="nav-link" onClick={handleScrollToFeatures}>More Features</button> {/* Change Link to button */}
+          <button className="nav-link" onClick={handleScrollToFeatures}>More Features</button>
         </div>
        
         <div className="navbar-end">
@@ -81,7 +82,7 @@ const Navbar = () => {
       <Dialog open={isDialogOpen} onClose={handleCloseDialog}>
         <DialogTitle>Sign In</DialogTitle>
         <DialogContent>
-          <SignInPage />
+          <SignInPage onSuccess={handleCloseDialog} onUserUpdate={handleUserUpdate} /> {/* Pass the update handler */}
         </DialogContent>
         <Button onClick={handleCloseDialog}>Close</Button>
       </Dialog>

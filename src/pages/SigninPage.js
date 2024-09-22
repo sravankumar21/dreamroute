@@ -1,9 +1,9 @@
-// src/pages/SignInPage.js
 import React, { useState } from 'react';
-import { Container, Typography, TextField, Button, Box, Tabs, Tab, Divider } from '@mui/material';
+import { Container, Typography, TextField, Button, Box, Tabs, Tab, Divider, Dialog } from '@mui/material';
 import { styled } from '@mui/system';
-import { signInWithPopup } from 'firebase/auth';
-import { auth, provider } from '../firebase'; // Correct import
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { auth, provider, signInWithPopup } from '../firebase';
 
 const StyledContainer = styled(Container)(({ theme }) => ({
   padding: theme.spacing(4),
@@ -15,33 +15,64 @@ const TabPanel = styled('div')(({ theme }) => ({
   padding: theme.spacing(2),
 }));
 
-const SignInPage = ({ onClose }) => {
+const SignInPage = ({ onSuccess,onUserUpdate }) => { // Accept onSuccess prop
   const [activeTab, setActiveTab] = useState('signIn');
-
-  const handleSignIn = async () => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      console.log('User Info:', user);
-      onClose(); // Close dialog after successful sign-in
-    } catch (error) {
-      console.error('Sign-In Error:', error);
-    }
-  };
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleGoogleSignIn = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      console.log('User Info:', user);
-      onClose(); // Close dialog after successful sign-in
+      const { user } = result;
+
+      // Send user details to your backend
+      const response = await axios.post('http://localhost:4000/auth/firebase-signin', {
+        email: user.email,
+        displayName: user.displayName,
+        photoURL: user.photoURL,
+        uid: user.uid,
+      });
+
+      const { token } = response.data;
+      localStorage.setItem('token', token); // Store the JWT token\
+      onUserUpdate({ token });
+      onSuccess(); // Close dialog after successful Google sign-in
     } catch (error) {
       console.error('Google Sign-In Error:', error);
+      setError('Google Sign-In Error');
+    }
+  };
+
+  const handleSignIn = async () => {
+    try {
+      const response = await axios.post('http://localhost:4000/auth/signin', { email, password });
+      const { token } = response.data;
+      localStorage.setItem('token', token);
+      onUserUpdate({ token }); // Store token in localStorage
+      onSuccess(); // Close dialog on success
+    } catch (error) {
+      const errorMessage = error.response?.data?.message || 'Sign-In Error';
+      setError(errorMessage); // Show error message on the UI
+    }
+  };
+
+  const handleSignUp = async () => {
+    try {
+      await axios.post('http://localhost:4000/auth/signup', { email, password, first_name: firstName, last_name: lastName });
+      onSuccess(); // Close dialog on success
+    } catch (error) {
+      const errorMessage = error.response?.data?.message || 'Sign-Up Error';
+      setError(errorMessage); // Show error message on the UI
     }
   };
 
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
+    setError(''); // Clear error message on tab change
   };
 
   return (
@@ -56,6 +87,7 @@ const SignInPage = ({ onClose }) => {
         </Tabs>
       </Box>
       <TabPanel>
+        {error && <Typography color="error" align="center">{error}</Typography>}
         {activeTab === 'signIn' && (
           <div>
             <TextField
@@ -63,11 +95,8 @@ const SignInPage = ({ onClose }) => {
               fullWidth
               margin="normal"
               autoComplete="on"
-            //   InputProps={{
-            //     startAdornment: (
-            //       <i className="gfg-icon gfg-icon-2 gfg-icon-grey-profile" />
-            //     ),
-            //   }}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
               label="Password"
@@ -75,11 +104,8 @@ const SignInPage = ({ onClose }) => {
               fullWidth
               margin="normal"
               autoComplete="on"
-            //   InputProps={{
-            //     startAdornment: (
-            //       <i className="gfg-icon gfg-icon-2 gfg-icon-grey-lock" />
-            //     ),
-            //   }}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginY: 2 }}>
               <div>
@@ -104,20 +130,43 @@ const SignInPage = ({ onClose }) => {
         {activeTab === 'signUp' && (
           <div>
             <TextField
-              label="Email"
+              label="First Name"
               fullWidth
               margin="normal"
+              autoComplete="on"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+            <TextField
+              label="Last Name"
+              fullWidth
+              margin="normal"
+              autoComplete="on"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
+            <TextField
+              label="Username or email"
+              fullWidth
+              margin="normal"
+              autoComplete="on"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
               label="Password"
               type="password"
               fullWidth
               margin="normal"
+              autoComplete="on"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <Button
               variant="contained"
               color="primary"
               fullWidth
+              onClick={handleSignUp}
               sx={{ marginTop: 2 }}
             >
               Sign Up
